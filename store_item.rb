@@ -7,10 +7,10 @@ class Shirt
   
   attr_accessor :type, :size, :color
 
-  def initialize(type, size, color)
-    @type = type
-    @size = size
-    @color = color    
+  def initialize(shirt_options)
+    @type = shirt_options[:type]
+    @size = shirt_options[:size]
+    @color = shirt_options[:color]
   end
   # def type
   #   @type    
@@ -32,7 +32,7 @@ class Shirt
   # end
 end
 
-crew_shirt = Shirt.new("crew neck", "M", "Black")
+crew_shirt = Shirt.new({:type => "crew neck", :size => "M", :color => "Black"})
 puts crew_shirt.type
 puts crew_shirt.size
 puts crew_shirt.color

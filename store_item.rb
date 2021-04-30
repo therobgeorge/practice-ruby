@@ -1,8 +1,3 @@
-# shirt1 = {:type => "crew neck", :size => "M", :color => "Black"}
-# shirt2 = {type: "hoodie", size: "S", color: "Green"}
-# shirt3 = {type: "western", size: "L", color: "blue"}
-
-
 class Shirt 
   
   attr_accessor :type, :size, :color
@@ -12,25 +7,19 @@ class Shirt
     @size = shirt_options[:size]
     @color = shirt_options[:color]
   end
-  # def type
-  #   @type    
-  # end
-  # def size
-  #   @size
-  # end
-  # def color
-  #   @color
-  # end
-  # def type=(input_type)
-  #   @type = input_type
-  # end
-  # def size=(input_size)
-  #   @size = input_size    
-  # end
-  # def color=(input_color)
-  #   @color = input color
-  # end
+  
+  def print_info
+    puts "We have a #{type} shirt in a size #{size} and it is #{black}."
+  end
 end
+
+class Food < Shirt
+  attr_accessor :shelf_life
+  
+  def initialize(shirt_options)
+    super
+    @shelf_life = shirt_options[shelf_life]
+  end
 
 crew_shirt = Shirt.new({:type => "crew neck", :size => "M", :color => "Black"})
 puts crew_shirt.type

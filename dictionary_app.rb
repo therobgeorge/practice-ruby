@@ -1,5 +1,5 @@
 require "http"
-loop do
+while true
   system "clear"
   puts "Type a word get a definition! (enter q if you would like to quit"
   word = gets.chomp
